@@ -1,22 +1,7 @@
-const reactDescriptions = ["Fundamental", "Crucial", "Core"];
+import Header from ".components/Header.jsx"
 
-function getRandomInt() {
+import function getRandomInt() {
   return Math.floor(Math.random() * 3);
-}
-
-function Header() {
-  const rendom = reactDescriptions[getRandomInt()];
-
-  return (
-    <header>
-      <img src="src/assets/react-core-concepts.png" alt="Stylized atom" />
-      <h1>React Essentials</h1>
-      <p>
-        {rendom} concepts you will need for almost any app you are going to
-        build!
-      </p>
-    </header>
-  );
 }
 
 function App() {
@@ -29,5 +14,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
