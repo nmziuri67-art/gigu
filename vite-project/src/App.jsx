@@ -1,33 +1,16 @@
-const reactDescriptions = ["Fundamental", "Crucial", "Core"];
+const userData = {
+  firstName: "Nika",
+  lastName: "giguashvili",
+  title: "student",
+};
 
-function getRandomInt() {
-  return Math.floor(Math.random() * 3);
-}
-
-function Header() {
-  const rendom = reactDescriptions[getRandomInt()];
-
+function User() {
   return (
-    <header>
-      <img src="src/assets/react-core-concepts.png" alt="Stylized atom" />
-      <h1>React Essentials</h1>
-      <p>
-        {rendom} concepts you will need for almost any app you are going to
-        build!
-      </p>
-    </header>
-  );
-}
-
-function App() {
-  return (
-    <div>
-      <Header />
-      <main>
-        <h2>Time to get started!</h2>
-      </main>
+    <div id="user" data-testid="user">
+      <h1>
+        {userData.firstName} {userData.lastName}
+      </h1>
+      <p>{userData.title}</p>
     </div>
   );
 }
-
-export default App;
