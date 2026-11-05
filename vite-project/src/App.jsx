@@ -1,25 +1,10 @@
-<<<<<<< HEAD
-const userData = {
-  firstName: "Nika",
-  lastName: "giguashvili",
-  title: "student",
-};
-
-function User() {
+function CoreConcept(props) {
   return (
-    <div id="user" data-testid="user">
-      <h1>
-        {userData.firstName} {userData.lastName}
-      </h1>
-      <p>{userData.title}</p>
-    </div>
+    <li>
+      <h3>{props.title}</h3>
+      <p>{props.description}</p>
+    </li>
   );
-}
-=======
-import Header from ".components/Header.jsx"
-
-import function getRandomInt() {
-  return Math.floor(Math.random() * 3);
 }
 
 function App() {
@@ -27,10 +12,21 @@ function App() {
     <div>
       <Header />
       <main>
-        <h2>Time to get started!</h2>
+        <section id="core-concepts">
+          <h2>Core Concepts</h2>
+          <ul>
+            <CoreConcept
+              title="Components"
+              description="var moswavle vswavlob rekts 16 wlis."
+            />
+            <CoreConcept title="compon" description="i live in tbilisi" />
+            <CoreConcept title="Props" description="i go to N77 school." />
+            <CoreConcept title="jsx" description="i am learning react rn" />
+          </ul>
+        </section>
       </main>
     </div>
   );
 }
+
 export default App;
->>>>>>> 062ccd453266eaf482ed123e521980458e5244f4
