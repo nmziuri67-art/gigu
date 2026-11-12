@@ -1,11 +1,7 @@
-function CoreConcept({ title, description }) {
-  return (
-    <li>
-      <h3>{title}</h3>
-      <p>{description}</p>
-    </li>
-  );
-}
+import { CORE_CONCEPTS } from "./data";
+import CoreConcept from "./components/CoreConcept";
+import Header from "./components/Header";
+import TabButton from "./components/TabButton";
 
 function App() {
   return (
@@ -16,13 +12,35 @@ function App() {
           <h2>Core Concepts</h2>
           <ul>
             <CoreConcept
-              title="Components"
-              description="var moswavle vswavlob rekts 16 wlis."
+              image={CORE_CONCEPTS[0].image}
+              title={CORE_CONCEPTS[0].title}
+              description={CORE_CONCEPTS[0].description}
             />
-            <CoreConcept title="compon" description="i live in tbilisi" />
-            <CoreConcept title="Props" description="i go to N77 school." />
-            <CoreConcept title="jsx" description="i am learning react rn" />
+            <CoreConcept
+              image={CORE_CONCEPTS[1].image}
+              title={CORE_CONCEPTS[1].title}
+              description={CORE_CONCEPTS[1].description}
+            />
+            <CoreConcept
+              image={CORE_CONCEPTS[2].image}
+              title={CORE_CONCEPTS[2].title}
+              description={CORE_CONCEPTS[2].description}
+            />
+            <CoreConcept
+              image={CORE_CONCEPTS[3].image}
+              title={CORE_CONCEPTS[3].title}
+              description={CORE_CONCEPTS[3].description}
+            />
           </ul>
+        </section>
+        <section id="examples">
+          <h2>Examples</h2>
+          <menu>
+            <TabButton />
+            <TabButton />
+            <TabButton />
+            <TabButton />
+          </menu>
         </section>
       </main>
     </div>
